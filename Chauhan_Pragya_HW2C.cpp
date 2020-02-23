@@ -1,0 +1,38 @@
+#include<iostream>
+
+using namespace std;
+
+int isPrime(int a, int b)
+{ int count =0, numberP = 0;
+for(int i=a; i<=b; i++)
+	{   count=0;
+		for(int j=2; j<i; j++)
+		{
+			if(i%j==0)
+			{
+				count++;
+				break;
+			}
+		}
+		if(count==0)
+		{   numberP = numberP +1;
+		}
+	}return numberP;
+}
+
+int main()
+{
+
+	int a, b;
+	int count=0, numberP=0;
+	cout<<"Please enter a positive integer as the minimum:";
+    cin>>a;
+	cout<<"Please enter a positive integer as the maximum:";
+    cin>>b;
+    
+    numberP = isPrime(a,b);
+    
+    
+    
+cout <<"There are "<<numberP<<" in the range["<<a<<", "<<b<<"]";
+}
