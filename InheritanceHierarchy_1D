@@ -5,7 +5,7 @@ class C {
 	int x;
 public:
 	C(int x) : x(x) {}
-	virtual void f() = 0;
+	virtual void f() = 0;		//abstract class =0
 };
 
 class D : public C {
