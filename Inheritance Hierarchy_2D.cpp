@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-class C {
+class C {                          //declaration of base class
 	int x;
 public:
 	C(int x) : x(x) {}
 	virtual void f() {}
 };
 
-class D : public C {
+class D : public C {                    //class D inheriting class C publically
 	int y;
 public:
 	D(int x, int y) : C(x), y(y) {}
 	virtual void g() = 0;
 };
 
-class F : public D {
+class F : public D {                   //class F inheriting class D publically
 public:
 	F(int x, int y) : D(x,y) {}
 	void f() { cout << "F"; }
 };
 
-class G : public F {
+class G : public F {                     //class G inheriting class F publically
 public:
 	G(int x, int y) : F(x,y) {}
 	void g() { cout << "G"; }
