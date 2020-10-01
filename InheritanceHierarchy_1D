@@ -8,13 +8,13 @@ public:
 	virtual void f() = 0;		//abstract class =0
 };
 
-class D : public C {
+class D : public C {             //class D inheriting class C publically
 	int y;
 public:
 	D(int x, int y) : C(x), y(y) {}
 };
 
-class F : public D {
+class F : public D {                  //class F inheriting class D publically
 public:
 	F(int x, int y) : D(x,y) {}
 	void f() { cout << "F"; }
